@@ -11,7 +11,7 @@ public class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
 
         HashSet<Integer> set1 = new HashSet<>();
-        HashSet<Object> set2 = new HashSet<>();
+        HashSet<Integer> set2 = new HashSet<>();
         for (int i : nums1) {
             set1.add(i);
         }
@@ -22,9 +22,8 @@ public class Solution {
         set1.retainAll(set2);
         int[] re = new int[set1.size()];
         int i = 0;
-        for (Object o : set1) {
-            //Object对象转化为int类型
-            re[i++] = Integer.parseInt(o.toString());
+        for (int o : set1) {
+            re[i++] = o;
 
         }
         return re;
