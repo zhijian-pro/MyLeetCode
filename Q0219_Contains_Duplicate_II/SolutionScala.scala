@@ -7,7 +7,7 @@ import scala.collection.mutable
   * @ Date: Created in 13:07 2019-04-05
   * @ Author: Anthony_Duan
   */
-object Q0219_Contains_Duplicate_II {
+object SolutionScala {
 
   def containsNearbyDuplicate(nums: Array[Int], k: Int): Boolean = {
 
