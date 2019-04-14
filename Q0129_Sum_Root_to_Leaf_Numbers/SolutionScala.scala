@@ -13,25 +13,26 @@ class TreeNode(var _value: Int) {
 
 object SolutionScala {
 
-  var sum = 0
 
-  def sumNumbers(root: TreeNode, prevSum: Int): Unit = {
+  def sumNumbers(root: TreeNode, prevSum: Int): Int = {
+    var sum = 0
     if (root == null) {
-      return
+      return 0
     }
     val currSum = prevSum * 10 + root.value
     if (root.left == null && root.right == null) {
       sum += currSum
     }
 
-    sumNumbers(root.left, currSum)
-    sumNumbers(root.right, currSum)
+    sum += sumNumbers(root.left, currSum)
+    sum += sumNumbers(root.right, currSum)
+    sum
   }
 
   def sumNumbers(root: TreeNode): Int = {
     sumNumbers(root, 0)
-    sum
   }
+
 
   def main(args: Array[String]): Unit = {
     val root = new TreeNode(4)
@@ -40,5 +41,6 @@ object SolutionScala {
     root.left.left = new TreeNode(5);
     root.left.right = new TreeNode(1);
     println(sumNumbers(root))
+
   }
 }
