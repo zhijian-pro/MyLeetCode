@@ -9,8 +9,8 @@ object SolutionScala {
 
   class TreeNode(var _value: Int) {
     var value: Int = _value
-    var left: TreeNode = null
-    var right: TreeNode = null
+    var left: TreeNode = _
+    var right: TreeNode = _
   }
 
   def sumOfLeftLeaves(root: TreeNode): Int = {
