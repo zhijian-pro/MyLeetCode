@@ -1,4 +1,4 @@
-package Q0001_Tow_Sum.Q0203_Remove_Linked_List_Elements
+package Q0203_Remove_Linked_List_Elements
 
 /**
   * @ Description:
